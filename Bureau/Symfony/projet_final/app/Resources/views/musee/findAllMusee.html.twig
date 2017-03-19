@@ -1,0 +1,64 @@
+{# app/Resources/views/musee/findAllMusee.html.twig #}
+
+	{% extends 'base.html.twig' %}
+
+		{% block title %} {{ parent() }} - La liste des musees affichés par 10 {% endblock  %}
+		{% block stylesheets %}
+            {# On charge le CSS de bootstrap depuis le site directement #}
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        {% endblock %}
+
+		{% block body %}
+
+            <ul>
+                <table class='table table-condensed table-responsive'>
+                    <caption> Liste des musees </caption>
+                    <tr>
+                         <th> Nom </th> <th> Adresse </th> <th> Coordonees </th>
+                    </tr>
+                {% for musee in listeMusee %}
+
+
+                        <tr>
+
+                            <td>   <a href= "{{ path('museeinfo', {'id': musee.id }) }}" > {{ musee.nom }}   </a> </td>
+                            <td>{{ musee.adresse }}</td>
+                                <td> 	{{ musee.coordonnees }} </td>
+
+                    </tr>
+
+
+
+
+
+                {% endfor %}
+                </table>
+            </ul>
+
+
+
+
+
+
+            <ul class="pagination">
+             <a href="{{  path('musee', {'page': 1})  }}" > </a>
+                {% if page < nbPages  %}<a href="{{ path('musee', {'page': page+1}) }}"> <input type="button" value="Next"> </a>{% endif %}
+                {% if page-1 != 0   %}<a href="{{ path('musee', {'page': page-1}) }}"> <input type="button" value="Previous"> </a>{% endif %}
+                <a href="{{ path('musee', {'page': nbPages}) }}"> <input type="button" value="End"> </a>
+
+            </ul>
+
+
+
+
+
+        {% endblock %}
+
+
+
+
+		{% block javascripts %}
+            {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        {% endblock %}
