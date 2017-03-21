@@ -2,14 +2,22 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity;
 use AppBundle\Entity\Commentaire;
 use AppBundle\Repository;
 use Doctrine\DBAL\Types\StringType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\BrowserKit\Response;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\DomCrawler\Field\TextareaFormField;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class MuseeController extends Controller
 {
@@ -49,55 +57,22 @@ class MuseeController extends Controller
             ->getManager()
             ->getRepository('AppBundle:Musee');
         $musee = $repository->findById(array('id' => $id));
-        return $this->render('musee/findOneMusee.html.twig', array(
-            'infomusee' => $musee,));
-    }
+        $commentaire = new Commentaire();
 
-
-
-    /**
-     * @Route("/form/{request}",  name="form")
-     */
-
-    public function addAction(Request $request)
-
-    {
-
-        // On crée un objet Commentaire
-
-        $com = new Commentaire();
-
-
-        // On crée le FormBuilder grâce au service form factory
-
-        $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $com);
-
-
-        // On ajoute les champs de l'entité que l'on veut à notre formulaire
+        $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $commentaire);
 
         $formBuilder
-            ->add('auteur', TextType::class)
-            ->add('date', DateType::class)
-            ->add('note', StringType::class)
-            ->add('contenu', TextType::class);
-
-        // À partir du formBuilder, on génère le formulaire
+            ->add('auteur'  ,  TextType::class         )
+            ->add('date'    ,  DateType::class         )
+            ->add('note'    ,  IntegerType::class      )
+            ->add('contenu' ,  TextareaType::class     )
+            ->add('save'    ,  SubmitType::class       ) ;
 
         $form = $formBuilder->getForm();
 
-
-        // On passe la méthode createView() du formulaire à la vue
-
-        // afin qu'elle puisse afficher le formulaire toute seule
-
         return $this->render('musee/findOneMusee.html.twig', array(
-
-            'form' => $form,
-
-        ));
-
+            'infomusee' => $musee, 'form' => $form->createView() ));
     }
-
-
 }
+
 ?>
