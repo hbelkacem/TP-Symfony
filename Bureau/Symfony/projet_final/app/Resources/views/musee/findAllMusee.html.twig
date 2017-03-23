@@ -9,7 +9,7 @@
         {% endblock %}
 
 		{% block body %}
-
+            <a href="{{ path('start') }}"> Acceuille </a>
             <ul>
                 <table class='table table-condensed table-responsive'>
                     <caption> Liste des musees </caption>
@@ -17,28 +17,14 @@
                          <th> Nom </th> <th> Adresse </th> <th> Coordonees </th>
                     </tr>
                 {% for musee in listeMusee %}
-
-
                         <tr>
-
                             <td>   <a href= "{{ path('museeinfo', {'id': musee.id }) }}" > {{ musee.nom }}   </a> </td>
                             <td>{{ musee.adresse }}</td>
-                                <td> 	{{ musee.coordonnees }} </td>
-
+                            <td> 	{{ musee.coordonnees }} </td>
                     </tr>
-
-
-
-
-
                 {% endfor %}
                 </table>
             </ul>
-
-
-
-
-
 
             <ul class="pagination">
              <a href="{{  path('musee', {'page': 1})  }}" > </a>
@@ -49,14 +35,7 @@
             </ul>
 
 
-
-
-
         {% endblock %}
-
-
-
-
 		{% block javascripts %}
             {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

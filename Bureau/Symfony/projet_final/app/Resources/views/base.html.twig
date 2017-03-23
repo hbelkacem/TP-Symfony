@@ -5,9 +5,49 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+
+            <div id="map" style="height: 500px;"></div>
+            <script>
+                function draw_map(data) {
+                    var map = L.map('map');
+                    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+                    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+                    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 14, attribution: osmAttrib});
+                    map.setView(new L.LatLng(48.86, 2.34),12);
+                    map.addLayer(osm);
+                    var marker;
+                    data.forEach(function(musee){
+                        marker = L.marker([musee.lat, musee.lon]).addTo(map);
+                        marker.bindPopup("<b>"+musee.nom+"</b>").openPopup();
+                    });
+                    marker.openPopup();
+                }
+
+                var data = [
+                    {
+                        nom:'Musée Carnavalet-Histoire de Paris',
+                        lat:'48.85699',
+                        lon:'2.36285648'
+                    },
+                    {
+                        nom:'Maison de Balzac',
+                        lat:'48.85538',
+                        lon:'2.280755'
+                    },
+                ];
+                draw_map(data);
+
+
+            </script>
+
+        {% endblock %}
     </body>
 </html>

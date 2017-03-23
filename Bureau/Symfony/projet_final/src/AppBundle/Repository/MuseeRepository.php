@@ -34,7 +34,6 @@ class MuseeRepository extends EntityRepository{
         }
 
         $query = $this->createQueryBuilder('m')->getQuery();
-
         $premierResultat = ($page - 1) * $nbMaxParPage;
         $query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);
         $PMusee = new Paginator($query);

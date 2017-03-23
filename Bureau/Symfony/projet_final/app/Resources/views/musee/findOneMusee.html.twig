@@ -11,9 +11,9 @@
             <div class="container">
 
                 <h2> toute les données d'un musee  </h2>
-                {% for musee in infomusee %}
+
                     <table class="table table-bordered table-striped table-condensed">
-                        <tr> <td> <strong> Nom du Musee:       </strong> </td> <td> {{ musee.getNom()              }} </td> <td>
+                        <tr> <td> <strong> Nom du Musee:       </strong> </td> <td>  {{ musee.getNom()              }} </td> <td>
                         <tr> <td> <strong> Coordonnées 	   </strong> </td> <td> {{ musee.getCoordonnees()      }} </td> <td>
                         <tr> <td> <strong> Adresse         </strong> </td> <td> {{ musee.getAdresse()          }} </td> <td>
                         <tr> <td> <strong> Code postal      </strong> </td> <td> {{ musee.getCodePostal()       }} </td> <td>
@@ -24,22 +24,35 @@
                         <tr> <td> <strong> Fermeture annuelle  </strong> </td> <td> {{ musee.getFermetureAnnuelle()}}  </td> <td>
                         <tr> <td> <strong> Periode ouverture   </strong> </td> <td> {{ musee.getPeriodesOuverture() }} </td> <td>
                     </table>
-                {% endfor %}
-                <footer>
-                    <p> Site des musee de Paris le : {{ "now"|date('d/m/Y') }}</p>
 
+
+                <footer>
+                    <a href="{{ path('musee', {'page': 1}) }}"> <input type="button" value="Retour à la liste"> </a>
+
+
+                    <p> Site des musee de Paris le : {{ "now"|date('d/m/Y') }}</p>
 
 
                 </footer>
             </div>
 
-
+            <table class="table table-bordered table-striped table-condensed">
+            {% for com in commentaires %}
+                <tr> <td> <strong>    {{ com.getAuteur() }} : </strong> </td> <td> {{ com.getContenu() }} </td></tr>
+                <tr> <td>le {{ com.getDate()|date('Y-m-d') }} </td> </tr>
+                <tr> <td>à donnée {{ com.getNote() }}/5 comme note </td> </tr>
+            {% endfor %}
+            </table>
             <h3>Votre avis nous interesse </h3>
 
             <div class="well">
 
-                {{ form(form) }}
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+
             </div>
+
 
 
 
