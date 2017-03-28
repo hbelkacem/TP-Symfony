@@ -138,7 +138,7 @@
             </ul>
         </li>
 
-        <li><a href="#">Aller à</a>
+        <li><a href="{{ path('start') }}">Accueille</a>
             <ul>
                 <li><a href="{{ path('start') }}">Accueille</a></li>
                 <li><a href="#">---------</a></li>
@@ -149,10 +149,12 @@
     </ul>
 
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <a href="{{ path('fos_user_security_logout') }}">
-            <p  id="connexion" ><button type="button" class="btn btn-success">Déconnection</button> </p>
-        </a>
+    <a href="{{ path('fos_user_security_logout') }}">
+        <p  id="connexion" ><button type="button" class="btn btn-success">Déconnection</button> </p>
+    </a>
     {% endif %}
+
+
 </div>
 
 
@@ -162,7 +164,6 @@
             {% if  is_granted("ROLE_ADMIN") %}
                <p id="connexion"> Ajouter un musee :
                 <a href="{{ path('addM') }}">
-
                    <button type="button" class="btn btn-info"> + </button>
                 </a>
                </p>
@@ -170,11 +171,18 @@
 
 
             <ul>
+
                     <table class='table table-bordered'>
-                    <caption> Liste des musees </caption>
-                    <tr>
-                         <th> Nom </th> <th> Adresse </th> <th> Actions </th>
+
+                        <caption> Liste des musees </caption>
+
+                        <tr>
+                         <th> Nom </th> <th> Adresse </th>
+                            {% if  is_granted("ROLE_ADMIN") %}
+                            <th> Actions </th>
+                            {% endif %}
                     </tr>
+
                 {% for musee in listeMusee %}
                         <tr>
                             <td>   <a href= "{{ path('museeinfo', {'id': musee.id }) }}" > {{ musee.nom }}   </a> </td>
@@ -182,10 +190,10 @@
 
                             {% if  is_granted("ROLE_ADMIN") %}
                             <td>
-                                <a href="{{ path('supprission' , {'musee': musee.id }) }}">
+                                <a href="{{ path('supprission' , {'id': musee.id }) }}">
                                     <button type="button" class="btn btn-danger">X</button>
                                 </a>
-                                <a href="{{ path('start') }} ">
+                                <a href="{{ path('modifier' , { 'id': musee.id }) }} ">
                                     <button type="button" class="btn btn-warning">Edit</button>
                                 </a>
 

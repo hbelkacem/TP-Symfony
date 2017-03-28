@@ -26,8 +26,18 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="171" column="0" lean-forward="false" selection-start-line="166" selection-start-column="4" selection-end-line="171" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="147" column="59" lean-forward="false" selection-start-line="147" selection-start-column="59" selection-end-line="147" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajoutMusee.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/ajoutMusee.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -36,21 +46,31 @@
       <file leaf-file-name="MuseeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MuseeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="141" column="7" lean-forward="false" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
+            <state relative-caret-position="105">
+              <caret line="162" column="14" lean-forward="false" selection-start-line="162" selection-start-column="14" selection-end-line="162" selection-end-column="14" />
               <folding>
                 <element signature="e#40#67#0#PHP" expanded="true" />
-                <marker date="1490696988060" expanded="true" signature="2791:3152" ph="SELECT count... AppBundle" />
+                <marker date="1490709025582" expanded="true" signature="2835:3196" ph="SELECT count... AppBundle" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="findAllMusee.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ModifieMusee.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/ModifieMusee.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="findAllMusee.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/findAllMusee.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="154" column="15" lean-forward="false" selection-start-line="154" selection-start-column="15" selection-end-line="154" selection-end-column="15" />
+            <state relative-caret-position="90">
+              <caret line="114" column="17" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="114" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -59,8 +79,20 @@
       <file leaf-file-name="CommentaireType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CommentaireType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="58" />
+            <state relative-caret-position="255">
+              <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+              <folding>
+                <element signature="e#34#74#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="findOneMusee.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/findOneMusee.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -88,7 +120,15 @@
       <find>password</find>
       <find>votre</find>
       <find>page</find>
+      <find>commenta</find>
+      <find>ajouter</find>
+      <find>redirectToRoute</find>
+      <find>addM</find>
+      <find>supp</find>
     </findStrings>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -107,7 +147,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/musee/accueille.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/CommentaireRepository.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/MuseeRepository.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Musee.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/musee/findcomment.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/musee/ajoutMusee.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Commentaire.php" />
@@ -124,13 +163,15 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/musee/findOneMusee.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/CommentaireType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/MuseeType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MuseeController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Musee.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/musee/findAllMusee.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/musee/ModifieMusee.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MuseeController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/musee/findOneMusee.html.twig" />
       </list>
     </option>
   </component>
@@ -184,6 +225,68 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet_final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet_final" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendsofsymfony" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet_final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet_final" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendsofsymfony" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet_final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet_final" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -203,72 +306,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,33 +367,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="musee" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_final" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="FOSUserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -374,16 +389,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../project_final" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Resources/views/musee" />
-      <recent name="$PROJECT_DIR$/app/Resources/views" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Repository" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/views/FOSUserBundle" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Form" />
       <recent name="$PROJECT_DIR$/web/images" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/app/Resources/musee" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/views/musee" />
+      <recent name="$PROJECT_DIR$/app/Resources/views" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Repository" />
     </key>
   </component>
@@ -474,31 +489,31 @@
       <workItem from="1490436017399" duration="2211000" />
       <workItem from="1490529861047" duration="25075000" />
       <workItem from="1490616195387" duration="20236000" />
-      <workItem from="1490690743681" duration="6535000" />
+      <workItem from="1490690743681" duration="16886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167032000" />
+    <option name="totallyTimeSpent" value="177383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2327791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29012346" sideWeight="0.5027712" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="157" y="124" width="1109" height="572" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293745" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28703704" sideWeight="0.49722883" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28703704" sideWeight="0.49722883" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="157" y="124" width="1109" height="572" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.084876545" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -525,14 +540,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ApiMusee/MuseeBundle/Controller/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApiMusee/MuseeBundle/Entity/Musee.php" />
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/FixtureInterface.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -669,14 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/MuseeRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserType.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -766,20 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="79" column="31" lean-forward="false" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -787,41 +772,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="63" lean-forward="false" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/findOneMusee.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/ajoutMusee.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Musee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -836,47 +790,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CommentaireType.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="58" />
+        <state relative-caret-position="327">
+          <caret line="79" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/MuseeType.php">
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="63" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="30" column="60" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/ajoutMusee.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/MuseeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CommentaireType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
           <folding>
             <element signature="e#34#74#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MuseeController.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Musee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="141" column="7" lean-forward="false" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
+        <state relative-caret-position="351">
+          <caret line="394" column="0" lean-forward="true" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/MuseeType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
-            <element signature="e#40#67#0#PHP" expanded="true" />
-            <marker date="1490696988060" expanded="true" signature="2791:3152" ph="SELECT count... AppBundle" />
+            <element signature="e#34#74#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="171" column="0" lean-forward="false" selection-start-line="166" selection-start-column="4" selection-end-line="171" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="147" column="59" lean-forward="false" selection-start-line="147" selection-start-column="59" selection-end-line="147" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MuseeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="162" column="14" lean-forward="false" selection-start-line="162" selection-start-column="14" selection-end-line="162" selection-end-column="14" />
+          <folding>
+            <element signature="e#40#67#0#PHP" expanded="true" />
+            <marker date="1490709025582" expanded="true" signature="2835:3196" ph="SELECT count... AppBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/ModifieMusee.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/findAllMusee.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="154" column="15" lean-forward="false" selection-start-line="154" selection-start-column="15" selection-end-line="154" selection-end-column="15" />
+        <state relative-caret-position="90">
+          <caret line="114" column="17" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="114" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/FOSUserBundle/views/Group/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/musee/findOneMusee.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           <folding />
         </state>
       </provider>

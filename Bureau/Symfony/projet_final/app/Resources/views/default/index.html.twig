@@ -129,31 +129,23 @@
 
 
 <ul id="menu-demo2">
-    <li><a href="#">Lien menu 1</a>
+    <li><a href="{{ path('start') }}">Accueille</a>
         <ul>
-            <li><a href="#">lien sous menu 1</a></li>
-            <li><a href="#">lien sous menu 1</a></li>
-            <li><a href="#">lien sous menu 1</a></li>
-            <li><a href="#">lien sous menu 1</a></li>
+            <li><a href="#">----------</a></li>
+                    </ul>
+    </li>
+    <li><a href="{{ path('musee', {'page': 1}) }}">Liste des musees</a>
+        <ul>
+            <li><a href="#">Liste musees</a></li>
+
         </ul>
     </li>
-    <li><a href="#">Lien menu 2</a>
+    <li><a href="#">to Do</a>
         <ul>
-            <li><a href="#">Lien sous menu 2</a></li>
-            <li><a href="#">Lien sous menu 2</a></li>
-            <li><a href="#">Lien sous menu 2</a></li>
-            <li><a href="#">Lien sous menu 2</a></li>
-        </ul>
+            <li><a href="#">------------</a></li>
+                    </ul>
     </li>
-    <li><a href="#">Lien menu 3</a>
-        <ul>
-            <li><a href="#">lien sous menu 3</a></li>
-            <li><a href="#">lien sous menu 3</a></li>
-            <li><a href="#">lien sous menu 3</a></li>
-            <li><a href="#">lien sous menu 3</a></li>
-        </ul>
-    </li>
-    <li><a href="{{ path('musee', {'page': 1}) }}">Nos musees</a>
+    <li><a href="{{ path('musee', {'page': 1}) }}">Regions </a>
         <ul>
             <li><a href="#">Ile de france</a></li>
             <li><a href="#">Haut normandie</a></li>
