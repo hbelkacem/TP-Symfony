@@ -156,9 +156,9 @@ class MuseeController extends Controller
     /**
      * @Route("/edit/{id}" , name="modifier")
      */
-
     public function EditMuseeAction(Musee $musee, Request $request)
     {
+
         $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page!');
         $form = $this->createForm('AppBundle\Form\MuseeType', $musee);
         $form->handleRequest($request);

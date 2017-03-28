@@ -110,9 +110,7 @@ class Musee
 
     /**
      * Set nom
-     *
      * @param string $nom
-     *
      * @return Musee
      */
     public function setNom($nom)
@@ -390,5 +388,11 @@ class Musee
         return $this->commentaire;
     }
 
+    public function setMusee(\AppBundle\Entity\Musee $musee)
+    {
+        $this->musee = $musee;
+
+        return $this;
+    }
 
 }
