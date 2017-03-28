@@ -151,6 +151,7 @@ class Musee
      *
      * @return string
      */
+
     public function getCoordonnees()
     {
         return $this->coordonnees;

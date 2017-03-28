@@ -33,22 +33,18 @@ class MuseeRepository extends EntityRepository{
             );
         }
 
+
         $query = $this->createQueryBuilder('m')->getQuery();
         $premierResultat = ($page - 1) * $nbMaxParPage;
         $query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);
         $PMusee = new Paginator($query);
 
-        if ( ($PMusee->count() <= $premierResultat) && $page != 1) {
+            if ( ($PMusee->count() <= $premierResultat) && $page != 1) {
             throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la première page
         }
 
         return $PMusee;
-
     }
-
-
-
 }
-
 
 ?>

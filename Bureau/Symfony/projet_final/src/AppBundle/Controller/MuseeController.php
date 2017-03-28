@@ -2,8 +2,9 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity;
+use AppBundle\Entity\Musee;
 use AppBundle\Entity\Commentaire;
+use AppBundle\Entity\User;
 use AppBundle\Repository;
 use Doctrine\DBAL\Types\StringType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -33,7 +34,7 @@ class MuseeController extends Controller
         $listeMusee = $this->getDoctrine()
             ->getManager()
             ->getRepository('AppBundle:Musee')
-            ->findAllMusee($page, $nbParPage);
+            ->findAllMusee($page,$nbParPage);
 
         // on calcule l'entier supérieur du nombre de page
         $nbPage = ceil(count($listeMusee) / $nbParPage);
@@ -50,14 +51,14 @@ class MuseeController extends Controller
     /**
      * @Route("/info/{id}",  name="museeinfo")
      */
-    public function findOneMuseeAction($id,Request $request)
+    public function findOneMuseeAction($id ,Request $request)
     {
 
         $repository = $this
             ->getDoctrine()
             ->getManager()
             ->getRepository('AppBundle:Musee');
-        $musee = $repository->find( $id);
+        $musee = $repository->find($id);
 
         ///Formulaire des commentaire
         $commentaire = new Commentaire();
@@ -65,10 +66,7 @@ class MuseeController extends Controller
         $form->handleRequest($request);
 
         if($request->isMethod('POST')){
-
-
             if($form->isValid()){
-
                 $em = $this->getDoctrine()->getManager();
                 $commentaire->setDate(new \DateTime('now'));
                 $commentaire->setMusee($musee);
@@ -76,21 +74,28 @@ class MuseeController extends Controller
                 $em->flush();
                 $request->getSession()->getFlashBag()->add('notice', 'Commentaire bien enregistrée !');
                 return $this->redirectToRoute('museeinfo', array('id' => $id));
-
             }
         }
 
         $listeCom = $this->getDoctrine()
             ->getManager()
             ->getRepository('AppBundle:Commentaire')
-            ->findAll();
+            ->findBy(
+                array('musee' => $id)
+            );
 
 
+
+        $res = split(' ',$musee->getCoordonnees());
+             $lat = $res[0];
+             $lon = $res[1];
 
         return $this->render('musee/findOneMusee.html.twig', array(
             'musee' => $musee,
             'form' => $form->createView(),
             'commentaires' => $listeCom,
+            'lat' => $lat,
+            'lon' => $lon,
         ));
     }
 
@@ -100,16 +105,52 @@ class MuseeController extends Controller
      */
 
     public function aceuille(){
-
         return $this->render('default/index.html.twig');
     }
 
+    /**
+     *@Route("/ajouterM", name="addM")
+     */
 
+    public function FormOfMusee(Request $request)
+    {
+
+        ///Formulaire des Musees
+        $musee = new Musee();
+        $form = $this->createForm('AppBundle\Form\MuseeType', $musee);
+        $form->handleRequest($request);
+
+
+        if($request->isMethod('POST')){
+
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($musee);
+                $em->flush();
+                return $this->redirectToRoute('musee', array('page' => 1));
+            }
+        }
+
+        return $this->render('musee/ajoutMusee.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
+
+
+    /**
+     * @Route("/supprim/{musee}" , name="supprission")
+     */
+    public function supprimMusee($musee){
+
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($musee);
+        $em->flush();
+        return $this->redirectToRoute('musee', array('page' => 108));
+
+    }
 
 
 }
-
-
-
 
 ?>

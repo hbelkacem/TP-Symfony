@@ -4,6 +4,9 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
+
 /**
  * Commentaire
  *
@@ -13,6 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Commentaire
 {
     /**
+     *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Musee" , inversedBy="Commentaire")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -30,7 +34,7 @@ class Commentaire
 
     /**
      * @var string
-     *
+     * @Assert\Length(max=10)
      * @ORM\Column(name="auteur", type="string", length=255)
      */
     private $auteur;
@@ -44,7 +48,7 @@ class Commentaire
 
     /**
      * @var int
-     *
+     * @Assert\Range(min=0 , max=5 ,minMessage="La note doit dèppaser 0", maxMessage="La note doit être infirieur à 5" )
      * @ORM\Column(name="note", type="integer")
      */
     private $note;

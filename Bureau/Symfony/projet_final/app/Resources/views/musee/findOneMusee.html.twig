@@ -2,58 +2,158 @@
 
 	{% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+        
+        #Rliste{
+            float: left;
+        }
+    </style>
+
+{% endblock %}
+
 
 		{% block title %} {{ parent() }} - La liste des musees affichés par 10 {% endblock  %}
 
 
 		{% block body %}
 
-            <div class="container">
 
-                <h2> toute les données d'un musee  </h2>
+                <div class="row">
+                    <div class="col-xs-1"></div>
 
-                    <table class="table table-bordered table-striped table-condensed">
-                        <tr> <td> <strong> Nom du Musee:       </strong> </td> <td>  {{ musee.getNom()              }} </td> <td>
-                        <tr> <td> <strong> Coordonnées 	   </strong> </td> <td> {{ musee.getCoordonnees()      }} </td> <td>
-                        <tr> <td> <strong> Adresse         </strong> </td> <td> {{ musee.getAdresse()          }} </td> <td>
-                        <tr> <td> <strong> Code postal      </strong> </td> <td> {{ musee.getCodePostal()       }} </td> <td>
-                        <tr> <td> <strong> Ville           </strong> </td> <td> {{ musee.getVille()            }} </td> <td>
-                        <tr> <td> <strong> Site web        </strong> </td> <td> {{ musee.getSiteWeb()          }} </td> <td>
-                        <tr> <td> <strong> Statut          </strong> </td> <td> {{ musee.getStatut()           }} </td> <td>
-                        <tr> <td> <strong> Date de repuvertue  </strong> </td> <td> {{ musee.getReouverture()      }} </td> <td>
-                        <tr> <td> <strong> Fermeture annuelle  </strong> </td> <td> {{ musee.getFermetureAnnuelle()}}  </td> <td>
-                        <tr> <td> <strong> Periode ouverture   </strong> </td> <td> {{ musee.getPeriodesOuverture() }} </td> <td>
+                    <a href="{{ path('musee', {'page': 1}) }}">
+                        <button type="button" id="Rliste" class="btn btn-info" >Retour à la liste </button>
+                    </a>
+                </div>
+
+
+
+
+            <div class="row"><br><br> </div>
+            <div class="row">
+                <div class="col-xs-1"> </div>
+                <div class="col-xs-5">
+                    <p class="bg-primary"> Site des musee de Paris le : {{ "now"|date('d/m/Y') }}</p>
+                <h5> Information de {{ musee.nom }}  </h5>
+
+                    <table class="table table-bordered table-striped table-condensed" style="padding-left: 100px; ">
+
+                        <tr>
+                            <td> <strong> Nom du Musee:       </strong> </td>
+                            <td>  {{ musee.getNom()              }} </td>
+                            <td>
+
+                        </tr>
+
+                        <tr>
+                            <td> <strong> Coordonnées 	   </strong> </td>
+                            <td> {{ musee.getCoordonnees()      }} </td>
+                            <td> </td>
+                        </tr>
+
+                        <tr>
+                            <td> <strong> Adresse         </strong> </td>
+                            <td> {{ musee.getAdresse()          }} </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> <strong> Code postal      </strong> </td>
+                            <td> {{ musee.getCodePostal()       }} </td>
+
+                        </tr>
+                        <tr>
+                            <td> <strong> Ville           </strong> </td>
+                            <td> {{ musee.getVille()            }} </td>
+
+                        </tr>
+                        <tr>
+                            <td> <strong> Site web        </strong> </td>
+                            <td> <a href="{{ musee.getSiteWeb() }}"> {{ musee.getSiteWeb() }} </a> </td>
+                                                    </tr>
+                        <tr>
+                            <td> <strong> Statut          </strong> </td>
+                            <td> {{ musee.getStatut()           }} </td>
+
+                        </tr>
+                        <tr>
+                            <td> <strong> Date de repuvertue  </strong> </td>
+                            <td> {{ musee.getReouverture()      }} </td>
+
+                        </tr>
+                        <tr>
+                            <td> <strong> Fermeture annuelle  </strong> </td>
+                            <td> {{ musee.getFermetureAnnuelle()}}  </td>
+                             </tr>
+                        <tr>
+                            <td> <strong> Periode ouverture   </strong> </td>
+                            <td> {{ musee.getPeriodesOuverture() }} </td>
+
+                        </tr>
                     </table>
 
+                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <h3>Votre avis nous interesse </h3>
+                    <div class="well">
 
-                <footer>
-                    <a href="{{ path('musee', {'page': 1}) }}"> <input type="button" value="Retour à la liste"> </a>
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        {{ form_end(form) }}
+                    </div>
 
 
-                    <p> Site des musee de Paris le : {{ "now"|date('d/m/Y') }}</p>
+                        {% endif %}
+
+                </div>
+                <div class="col-xs-3">
+
+                    {% block javascripts %}
+
+                        <div id="map" style="height: 500px;"></div>
+                        <script>
+                            function draw_map(data) {
+                                var map = L.map('map');
+                                var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+                                var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+                                var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 14, attribution: osmAttrib});
+                                map.setView(new L.LatLng(48.86, 2.34),12);
+                                map.addLayer(osm);
+                                var marker;
+                                data.forEach(function(musee){
+                                    marker = L.marker([musee.lat, musee.lon]).addTo(map);
+                                    marker.bindPopup("<b>"+musee.nom+"</b>").openPopup();
+                                });
+                                marker.openPopup();
+                            }
+
+                            var data = [
+                                {
+                                    nom:'{{ musee.nom }}',
+                                    lat:'{{ lat }}',
+                                    lon:'{{ lon }}'
+                                }
+                            ];
+                            draw_map(data);
+
+                        </script>
 
 
-                </footer>
-            </div>
+                    {% endblock  %}
 
-            <table class="table table-bordered table-striped table-condensed">
+                    <br><br>
+                    <table >
             {% for com in commentaires %}
+
                 <tr> <td> <strong>    {{ com.getAuteur() }} : </strong> </td> <td> {{ com.getContenu() }} </td></tr>
                 <tr> <td>le {{ com.getDate()|date('Y-m-d') }} </td> </tr>
                 <tr> <td>à donnée {{ com.getNote() }}/5 comme note </td> </tr>
-            {% endfor %}
+
+                            {% endfor %}
             </table>
-            <h3>Votre avis nous interesse </h3>
 
-            <div class="well">
-
-                {{ form_start(form) }}
-                {{ form_widget(form) }}
-                {{ form_end(form) }}
-
+                </div>
             </div>
-
-
-
 
         {% endblock %}

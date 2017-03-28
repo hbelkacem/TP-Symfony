@@ -7,15 +7,24 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
-class CommentaireType extends AbstractType
+class MuseeType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('auteur')->add('note')->add('contenu')->add('submit' , SubmitType::class);
+        $builder->add('nom')
+            ->add('coordonnees')
+            ->add('adresse')
+            ->add('codePostal')
+            ->add('ville')
+            ->add('siteWeb')
+            ->add('statut')
+            ->add('reouverture')
+            ->add('fermetureAnnuelle')
+            ->add('periodesOuverture')
+            ->add('Enregistrer' , SubmitType::class);
     }
     
     /**
@@ -24,7 +33,7 @@ class CommentaireType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Commentaire'
+            'data_class' => 'AppBundle\Entity\Musee'
         ));
     }
 
@@ -33,7 +42,7 @@ class CommentaireType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'appbundle_commentaire';
+        return 'appbundle_musee';
     }
 
 

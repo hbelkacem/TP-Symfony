@@ -59,5 +59,16 @@ class CommentaireController extends Controller
             'form' => $form->createView()
         ));
     }
+
+
+    /**
+     * @Route("/connexion", name="connexion")
+     */
+
+    public function userAction(){
+
+return $this->render("musee/layout.html.twig");
+    }
+
 }
 ?>
